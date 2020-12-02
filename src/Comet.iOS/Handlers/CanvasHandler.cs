@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Graphics.CoreGraphics;
 using Comet.iOS.Handlers;
 
@@ -12,6 +13,8 @@ namespace Comet.iOS
 		{
 
 		}
+
+		public override SizeF GetIntrinsicSize(SizeF availableSize) => availableSize;
 
 		protected override NativeGraphicsView CreateView() => new NativeGraphicsView();
 		public override void SetView(View view)
