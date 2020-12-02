@@ -107,6 +107,7 @@
     <Compile Include="Handlers\DatePickerHandler.cs" />
     <Compile Include="Extensions\DateExtensions.cs" />
     <Compile Include="Handlers\BodyHandler.cs" />
+    <Compile Include="Handlers\CanvasHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Comet\Comet.csproj">
@@ -119,6 +120,9 @@
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" />
+    <PackageReference Include="System.Graphics">
+      <Version>1.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
