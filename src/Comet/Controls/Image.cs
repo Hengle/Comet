@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using Comet.Graphics;
+using Bitmap = Comet.Graphics.Bitmap;
 namespace Comet
 {
 	public class Image : View

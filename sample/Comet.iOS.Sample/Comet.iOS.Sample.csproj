@@ -165,12 +165,6 @@
       <Project>{1817646E-E71E-48CF-80A4-3030EF870D61}</Project>
       <Name>Comet</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Comet.iOS\Comet.iOS.csproj">
-      <Project>{9DF36DBF-AFE6-438D-B7A6-1B5FB3D1D6D1}</Project>
-      <Name>Comet.iOS</Name>
-      <IsAppExtension>false</IsAppExtension>
-      <IsWatchApp>false</IsWatchApp>
-    </ProjectReference>
     <ProjectReference Include="..\Comet.Samples\Comet.Samples.csproj">
       <Project>{D058A769-9AE6-438F-960C-2ECC287F6D1E}</Project>
       <Name>Comet.Samples</Name>

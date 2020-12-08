@@ -52,23 +52,15 @@ namespace Comet.iOS
 			if (handler == null)
 			{
 				var builtView = view.GetView();
-				if (view.HasContent)
-				{
-					handler = new BodyHandler();
-					view.ViewHandler = handler;
-				}
-				else
-				{
-					handler = Registrar.Handlers.GetHandler(builtView.GetType()) as IViewHandler;
-					builtView.ViewHandler = handler;
-				}
+				handler = Registrar.Handlers.GetHandler(builtView.GetType()) as IViewHandler;
+				builtView.ViewHandler = handler;
 			}
 			var iUIView = handler as iOSViewHandler;
 			return iUIView;
 		}
 		public static UIView ToView(this View view)
 		{
-			var handler = view?.GetOrCreateViewHandler();
+			var handler = view.GetOrCreateViewHandler();
 			return handler?.View;
 		}
 
@@ -101,7 +93,7 @@ namespace Comet.iOS
 		// the public (int-based) enum is not helpful in this case.
 		// -1.0 (Thin / 100) to 1.0 (Black / 900) with 0 being Regular (400)
 		// which is not quite the center, not are the constant values linear
-		static readonly (float value, Weight weight)[] map = new(float, Weight)[] {
+		static readonly (float value, Weight weight)[] map = new (float, Weight)[] {
 			(-0.80f, Weight.Ultralight),
 			(-0.60f, Weight.Thin),
 			(-0.40f, Weight.Light),
@@ -148,7 +140,7 @@ namespace Comet.iOS
 			}
 		}
 
-		static float ToConstant (this Weight self)
+		static float ToConstant(this Weight self)
 		{
 			foreach (var (value, weight) in map)
 			{
